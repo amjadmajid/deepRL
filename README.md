@@ -1,8 +1,13 @@
 # deepRL
 
 ## ToDo list (tentatively sorted by priority)
-- [x] done
-- [ ] to be done
+[x] Preliminary table of content for the litterature review
+[x] Ran the Argos3 example simulations
+[x] Summarize the papers found
+[ ] Retry to run tensorswarm
+[ ] Start writing the report
+[ ] Continue reading/ watching lecture on DRL
+[ ] Continue research on how to move away from hardware
 
 ## Notes and ideas
 ### Preliminary Table of content for the paper:
@@ -32,4 +37,17 @@
 		d. "https://medium.com/beyond-intelligence/reinforcement-learning-or-evolutionary-strategies-nature-has-a-solution-both-8bc80db539b3"
 
 ## Sources
-1. source 1
+### Reinforcement learning:
+1. https://lilianweng.github.io/lil-log/2018/02/19/a-long-peek-into-reinforcement-learning.html#what-is-reinforcement-learning
+2. http://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf
+3. https://www.youtube.com/watch?v=2pWv7GOvuf0&list=PLqYmG7hTraZBiG_XpjnPrSNw-1XQaM_gB&index=2&t=0s&ab_channel=DeepMind
+4. https://www.davidsilver.uk/teaching/
+
+### Evolution strategies:
+1. https://blog.otoro.net/2017/10/29/visual-evolution-strategies/
+
+### Simulations:
+1. https://github.com/allsey87/argos3-srocs
+2. https://github.com/chenjiunhan/Predators_and_Prey/
+3. https://www.argos-sim.info/examples.php
+4. https://github.com/TensorSwarm/TensorSwarm
