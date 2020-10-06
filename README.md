@@ -1,13 +1,13 @@
 # deepRL
 
 ## ToDo list (tentatively sorted by priority)
--[x] Preliminary table of content for the litterature review
--[x] Ran the Argos3 example simulations
--[x] Summarize the papers found
--[ ] Retry to run tensorswarm
--[ ] Start writing the report
--[ ] Continue reading/ watching lecture on DRL
--[ ] Continue research on how to move away from hardware
+- [x] Preliminary table of content for the litterature review
+- [x] Ran the Argos3 example simulations
+- [x] Summarize the papers found
+- [ ] Retry to run tensorswarm
+- [ ] Start writing the report
+- [ ] Continue reading/ watching lecture on DRL
+- [ ] Continue research on how to move away from hardware
 
 ## Notes and ideas
 ### Preliminary Table of content for the paper:
