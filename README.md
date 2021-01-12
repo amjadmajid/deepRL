@@ -1,16 +1,13 @@
 # deepRL
 
 ## ToDo list (tentatively sorted by priority)
-- [x] Preliminary table of content for the litterature review
-- [x] Ran the Argos3 example simulations
-- [x] Summarize the papers found
-- [ ] Retry to run tensorswarm
-- [ ] Start writing the report
-- [ ] Continue reading/ watching lecture on DRL
-- [ ] Continue research on how to move away from hardware
+- [ ] Review common RL and ES algorithms section
+- [ ] Review the multiagent Evolution Strategy section
+- [ ] Write the comparison from an application standpoint section
+- [ ] Review the overall comparison section
 
 ## Notes and ideas
-### Preliminary Table of content for the paper:
+### Preliminary Table of content for the paper: (draft 1)
 
 	1. What are evolution strategies: https://blog.otoro.net/2017/10/29/visual-evolution-strategies/
 		a. What is an evolution strategy 
@@ -51,3 +48,12 @@
 2. https://github.com/chenjiunhan/Predators_and_Prey/
 3. https://www.argos-sim.info/examples.php
 4. https://github.com/TensorSwarm/TensorSwarm
+
+### Colab:
+1. https://colab.research.google.com/drive/1uNrJYWGeH7ukEiX871NqFVKu9649hucM?usp=sharing
+2. https://colab.research.google.com/drive/1O2M9BHkSVAZJzIW4Q7Dv6yOwLDrnt5ra?usp=sharing
+3. https://colab.research.google.com/drive/16c6GJNQQdDJlU82guoIcEkx_g8y9jqV3?usp=sharing
+
+### Relevant literature:
+1. A Parallel Evolutionary Algorithm with Value Decomposition for Multi-agent Problems (Gao Li, Qiqi Duan, and Yuhui Shi)
+2. Parallel Price Prediction Using Reinforcement Learning  (Mario Srouji and Karan Dhabalia)
