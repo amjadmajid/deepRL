@@ -1,9 +1,9 @@
 # deepRL
 
 ## ToDo list (tentatively sorted by priority)
+- [ ] Write the comparison from an application standpoint section
 - [ ] Review common RL and ES algorithms section
 - [ ] Review the multiagent Evolution Strategy section
-- [ ] Write the comparison from an application standpoint section
 - [ ] Review the overall comparison section
 
 ## Notes and ideas
