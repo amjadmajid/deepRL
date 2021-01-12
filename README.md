@@ -5,6 +5,7 @@
 - [ ] Review common RL and ES algorithms section
 - [ ] Review the multiagent Evolution Strategy section
 - [ ] Review the overall comparison section
+- [ ] Test: https://reposhub.com/python/deep-learning/JacopoPan-gym-pybullet-drones.html 
 
 ## Notes and ideas
 ### Preliminary Table of content for the paper: (draft 1)
@@ -44,10 +45,12 @@
 1. https://blog.otoro.net/2017/10/29/visual-evolution-strategies/
 
 ### Simulations:
-1. https://github.com/allsey87/argos3-srocs
-2. https://github.com/chenjiunhan/Predators_and_Prey/
-3. https://www.argos-sim.info/examples.php
-4. https://github.com/TensorSwarm/TensorSwarm
+1. https://reposhub.com/python/deep-learning/JacopoPan-gym-pybullet-drones.html
+2. https://github.com/bulletphysics/bullet3
+3. https://github.com/allsey87/argos3-srocs
+4. https://github.com/chenjiunhan/Predators_and_Prey/
+5. https://www.argos-sim.info/examples.php
+6. https://github.com/TensorSwarm/TensorSwarm
 
 ### Colab:
 1. https://colab.research.google.com/drive/1uNrJYWGeH7ukEiX871NqFVKu9649hucM?usp=sharing
