@@ -16,3 +16,4 @@ https://answers.ros.org/questions/scope:all/sort:activity-desc/tags:openai_ros/p
 http://wiki.ros.org/openai_ros#Turtlebot2
 - [ ] Test out the turtlebot tutorial with Q-learning
 - [ ] Test out changing the DRL algorithm 
+- [ ] Review the different hardware from the different papers and check which model is avaialble in ROS/ Gazebo
