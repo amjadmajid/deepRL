@@ -15,7 +15,7 @@ https://github.com/jr-robotics/robo-gym
 https://answers.ros.org/questions/scope:all/sort:activity-desc/tags:openai_ros/page:1/
 http://wiki.ros.org/openai_ros#Turtlebot2
 - [x] Test out navigation without collision using SLAM and using Lidar in ROS and Gazebo
-- [ ] Understand and try Computer Vision in robotics
+- [x] Computer Vision in robotics- Test out image recogntion from a camera attached on a robot in ROS/Gazebo
 - [ ] Test out the turtlebot tutorial with Q-learning
 - [ ] Test out changing the DRL algorithm 
 - [ ] Review the different hardware from the different papers and check which model is avaialble in ROS/ Gazebo
