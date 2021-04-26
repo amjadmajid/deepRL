@@ -17,5 +17,9 @@ http://wiki.ros.org/openai_ros#Turtlebot2
 - [x] Test out navigation without collision using SLAM and using Lidar in ROS and Gazebo
 - [x] Computer Vision in robotics- Test out image recogntion from a camera attached on a robot in ROS/Gazebo
 - [X] Test out the turtlebot tutorial with DQN: travel to a target location and travel to a target location whhile avoiding obstacles
-- [ ] Learn how to change the DRL algorithm 
-- [ ] Review the different hardware from the different papers and check which model is avaialble in ROS/ Gazebo
+- [X] Review COVID-Robot: Monitoring Social Distancing Constraints in Crowded Scenarios
+- [X] Review Long-Range Indoor Navigation with PRM-RL
+- [X] Review SARL: Deep Reinforcement Learning based Human-Aware Navigation for Mobile Robot in Indoor Environments
+- [ ] Identify, compare and assess which DRL navigation algorithm is most suited for our task
+- [ ] Work on implementing the algorithm and try it out in simulation
+- [ ] Review the different hardware from the different papers and check which model is avaialble in ROS/ Gazebo 
