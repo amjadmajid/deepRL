@@ -1,0 +1,104 @@
+A workspace in ROS is an isolated environment for building and running your software. The workspace will contain all the ROS packages you will need for your project.
+Physically, it is a folder in your home directory that contains all of the specific files of your application in such a way that deploying this workspace in another machine with ROS preinstalled will work properly and do the same as it did on the original computer.
+Configuring your ROS development environment:
+	• Install Ubuntu 18.04
+	• sudo apt update
+	• sudo apt install curl git
+	• sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+	• sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+	• curl -sSL 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xC1CF6E31E6BADE8868B172B4F42ED6FBAB17C654' | sudo apt-key add -
+	• sudo apt update
+	• sudo apt install ros-melodic-desktop-full
+	• sudo rosdep init
+	• rosdep update
+	• source /opt/ros/melodic/setup.bash
+	• echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc $ source ~/.bashrc
+	• sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential
+Creating a workspace:
+Create the folders that you will need later to place your ROS packages:
+	• mkdir -p ~/catkin_ws/src
+Move to this last folder and issue the following command to initialize the workspace:
+	• cd ~/catkin_ws/src
+	• catkin_init_workspace
+Build the workspace for the first time; it does not matter that the folder is empty at this time:
+	• cd ~/catkin_ws
+	• catkin_make
+To add the workspace to your ROS environment, you need to source the generated setup file:
+	• source ~/catkin_ws/devel/setup.bash
+To avoid having to run this command each time you open a new terminal, include it in your .bashrc file:
+	• echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+	• source ~/.bashrc
+Setting up a ROS package:
+From a terminal, clone the book repository, https://github.com/PacktPublishing/Hands-On-ROS-for-Robotics-Programming, into your home folder:
+	• cd ~
+	• git clone https://github.com/PacktPublishing/Hands-On-ROS-for-Robotics-Programming 
+Copy the code of this chapter into the ROS workspace. That way, you will have a cleaner ROS environment:
+	• cp -R ~/Hands-On-ROS-for-Robotics-Programming/Chapter3_ROS_basics ~/catkin_ws/src
+ Go to the workspace root and build again:
+	• cd ~/catkin_ws
+	• catkin_make
+	• source ~/catkin_ws/devel/setup.bash
+The way to check whether the newly added package—ros_basics—is known to ROS is to execute this simple command:
+	• rospack list | grep ros_basics
+		○ Output: ros_basics /home/bronquillo/catkin_ws/src/book/Chapter3_ROS_basics
+We will need to deal with several simultaneous terminals, we will make use of a very handy tool, Terminator, that allows you to simultaneously handle several terminals
+	• sudo apt-get update
+	• sudo apt-get install terminator
+Gazebo:
+Test the Gazebo installation by launching it with a premade environment:
+	• roslaunch gazebo_ros empty_world.launch
+Teleoperation package
+key_teleop (http://wiki.ros.org/key_teleop) is a ROS-contributed package that provides a very simple mechanism for controlling a robot using the arrow keys of the keyboard. 
+	• cd ~/catkin_ws/src
+	• git clone https://github.com/ros-teleop/teleop_tools
+	• cd .. && catkin_make
+Applying ML in robotics:
+Installing pip
+	• sudo apt remove python-pip
+	• sudo apt update
+	• curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+	• sudo python get-pip.py
+	• pip --version
+Installing tensorflow: OpenCV, the well-known and open source computer vision library (https://opencv.org/), brings to ROS the capability of image processing. It is used by TensorFlow to deal with images that you will obtain from the robot camera.
+	• pip install opencv-python --user
+Install Tensorflow
+	• pip install --upgrade tensorflow --user (install the newest tensorflow)
+	• pip install tensorflow==1.12.0 (in case you are using python 2)
+Achieving better performance using the GPU -- In my case I am running VMWARE so can't use the GPU:
+	• pip install --upgrade tensorflow-gpu --user
+	• pip install --upgrade tensorflow-gpu==1.12 --user (in case you are using python 2)
+Download anaconda to set up a virtual environment:
+Visit the download section of the Anaconda website at https://www.anaconda.com/distribution/#linux, and select the appropriate download based on the linux version
+	• bash Anaconda2-2019.10-Linux-x86_64.sh (this is the version downloaded for python 2)
+	• source ~/.bashrc
+	• conda config --set auto_activate_base false
+	• conda activate
+	• (base) $ jupyter notebook
+	• (base) $ conda deactivate
+	• conda create -n gym pip python=2.7
+	• conda activate gym
+	• pip install tensorflow==1.12.0
+	• pip install opencv-python==4.2.0.32
+	• pip install gym==0.15.4
+	• conda install swig
+Install an optional library called pybox2d. This is a 2D physics engine for games and simple simulations, used by some of the premade environments that ship with Gym:
+	• Pip install box2d-py
+	• pip show gym
+	• pip install keras==2.3.0
+	• conda install jupyter
+	• gym deactivate
+Installing OpenAI ROS
+	• cd ~/catkin_ws/src
+	• git clone https://bitbucket.org/theconstructcore/openai_ros.git
+	• cd ~/ros_ws
+	• catkin_make
+	• source devel/setup.bash
+	• rosdep install openai_ros
+
+#Deep Reinforcement Learning for Swarm Robots Navigation Airport Settings
+
+## ToDo
+- [ ] Read this [paper] (https://arxiv.org/pdf/1808.03841.pdf) thoroughly 
+- [ ] Present its advantages and disadvantages 
+- [ ] Propose an alternative/modified solution to the problem of Multi-robot
+navigation using Deep RL (think of using ES)
