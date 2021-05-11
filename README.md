@@ -17,7 +17,7 @@ http://wiki.ros.org/openai_ros#Turtlebot2
 - [X] Write out the steps required for installing OpenAI ROS and the overall environment for simulation
 - [X] Start writing the hardware benchmarking on overleaf
 
-### Next Week: 11 May --> 18 May
+### Next Week: 11 May --> 18 May (Check with Amjad on what needed to be done as well)
 - [ ] Identify, compare and assess which DRL navigation algorithm is most suited for our task/ Software benchmarking
 - [ ] Start checking some tutorials for the jetson nano, etc.
-- [ ] Work on implementing a DRL algorithm in simulation 
+- [ ] Work on implementing a DRL algorithm in simulation
