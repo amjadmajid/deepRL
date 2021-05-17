@@ -12,12 +12,12 @@ http://wiki.ros.org/openai_ros#Turtlebot2
 - [X] Review COVID-Robot: Monitoring Social Distancing Constraints in Crowded Scenarios
 - [X] Review SARL: Deep Reinforcement Learning based Human-Aware Navigation for Mobile Robot in Indoor Environments
 
-### This Week: 6 May --> 11 May
+### Week: 6 May --> 11 May
 - [X] Review the different hardware from the different papers and check which model is avaialble in ROS/ Gazebo 
 - [X] Write out the steps required for installing OpenAI ROS and the overall environment for simulation
 - [X] Start writing the hardware benchmarking on overleaf
 
-### Next Week: 11 May --> 18 May
+### This Week: 11 May --> 18 May
 - [ ] Identify, compare and assess which DRL navigation algorithm is most suited for our task/ Software benchmarking (WIP)
   - [X] Paper reviewed for DRL navigation using vision:
     - A brief survey: DRL in mobile robot navigation
