@@ -17,7 +17,21 @@ http://wiki.ros.org/openai_ros#Turtlebot2
 - [X] Write out the steps required for installing OpenAI ROS and the overall environment for simulation
 - [X] Start writing the hardware benchmarking on overleaf
 
-### Next Week: 11 May --> 18 May (Check with Amjad on what needed to be done as well)
-- [ ] Identify, compare and assess which DRL navigation algorithm is most suited for our task/ Software benchmarking
-- [ ] Start checking some tutorials for the jetson nano, etc.
-- [ ] Work on implementing a DRL algorithm in simulation
+### Next Week: 11 May --> 18 May
+- [ ] Identify, compare and assess which DRL navigation algorithm is most suited for our task/ Software benchmarking (WIP)
+  - [X] Paper reviewed for DRL navigation using vision:
+    -A brief survey: DRL in mobile robot navigation
+    -Mobile Robot Navigation based on Deep Reinforcement Learning
+    -Target-driven Visual Navigation in Indoor Scenes using Deep Reinforcement Learning
+    -Vision-based Navigation Using Deep Reinforcement Learning
+    -Visual Navigation in Real-World Indoor Environments Using End-to-End Deep Reinforcement Learning
+    -Towards Generalization in Target-Driven Visual Navigation by Using Deep Reinforcement Learning
+  - [X] Paper reviewed for breach detection:
+     -COVID-19: AI-Enabled Social Distancing Detector Using CNN
+     -Perceiving Humans: from Monocular 3D Localization to Social Distancing
+     -Monitoring COVID-19 social distancing with person detection and tracking via fine-tuned YOLO v3 and Deepsort techniques
+     -Face Mask Detection Using Transfer Learning of InceptionV3
+     -Face mask detection using YOLOv3 and faster R-CNN models: COVID-19 environment
+   - [ ] Research examples on how to present such a software benchmark: which algorithm to choose dor DRL or DL, what should be the metrics, etc. 
+- [ ] Work on implementing a DRL algorithm (other than DQN) in simulation (WIP)
+
