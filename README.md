@@ -28,10 +28,14 @@ http://wiki.ros.org/openai_ros#Turtlebot2
     - Towards Generalization in Target-Driven Visual Navigation by Using Deep Reinforcement Learning
   - [X] Paper reviewed for breach detection:
      - COVID-19: AI-Enabled Social Distancing Detector Using CNN
-     - Perceiving Humans: from Monocular 3D Localization to Social Distancing
      - Monitoring COVID-19 social distancing with person detection and tracking via fine-tuned YOLO v3 and Deepsort techniques
+     - A Vision-based Social Distancing and Critical Density Detection System for COVID-19
+     - A deep learning-based social distance monitoring framework for COVID-19
      - Face Mask Detection Using Transfer Learning of InceptionV3
      - Face mask detection using YOLOv3 and faster R-CNN models: COVID-19 environment
-   - [ ] Research examples on how to present such a software benchmark: which algorithm to choose dor DRL or DL, what should be the metrics, etc. 
+   - [X] Research examples on how to present such a software benchmark: which algorithm to choose dor DRL or DL, what should be the metrics, etc
+     - Automatic Social Distance Estimation From Images: Performance Evaluation, Test Benchmark, and Algorithm
+     - Single Image Human Proxemics Estimation for Visual Social Distancing
+     - Perceiving Humans: from Monocular 3D Localization to Social Distancing
 - [ ] Work on implementing a DRL algorithm (other than DQN) in simulation (WIP)
 
