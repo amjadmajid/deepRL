@@ -37,5 +37,17 @@ http://wiki.ros.org/openai_ros#Turtlebot2
      - Automatic Social Distance Estimation From Images: Performance Evaluation, Test Benchmark, and Algorithm
      - Single Image Human Proxemics Estimation for Visual Social Distancing
      - Perceiving Humans: from Monocular 3D Localization to Social Distancing
-- [ ] Work on implementing a DRL algorithm (other than DQN) in simulation (WIP)
+### 18 May --> 25 May
+- [X] Implemented the codes of two papers on image recognition/ breach detection
+  - [X] DeepSOCIAL
+  - [X] A Vision-based Social Distancing and Critical Density Detection System for COVID-19
+- [X] Worked on comparing the different algorithms and on understanding the different codes
+- [X] Implemented a pedestrian simulation environment in ROS and Gazebo along with a jetbot with a camera
+- [X] Working on implementing YOLO, or other Deep learning or Reinforcement learning algorithms in ROS and gazebo
+### This Week: 25 May --> 01 June
+- [X] Implemented the code for image recognition/ breach detection
+  - [X] Perceiving Humans: from Monocular 3D Localization to Social Distancing
+- [X] Compared between the different algorithms. Figured our the hardware required by each algorithm which helped in comparing
+- [X] Started writing the software benchmarking part of the report (vision and navigation)
+- [X] Worked on identifying the most adequate navigation algorithm and on trying to run some of the implementations I could find
 
