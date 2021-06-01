@@ -50,4 +50,5 @@ http://wiki.ros.org/openai_ros#Turtlebot2
 - [X] Compared between the different algorithms. Figured our the hardware required by each algorithm which helped in comparing
 - [X] Started writing the software benchmarking part of the report (vision and navigation)
 - [X] Worked on identifying the most adequate navigation algorithm and on trying to run some of the implementations I could find
-
+- [ ] Start implementing DRL algorithms for navigation based on available githubs
+- [ ] Figure out how the training in ROS/ Gazebo can be moved to an actual robot
