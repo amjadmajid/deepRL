@@ -1,1 +1,18 @@
-
+This ros wrapper was developed for the monoloco library which aims to visualize and detect social distancing compliance.<br/>
+It is being tested with ROS Noetic and Ubuntu 20.04<br/>
+The steps needed to run it are:
+1. Download and install ROS noetic
+2. Install openpifpaf: `<pip3 install openpifpaf>'
+3. Install monoloco: '<pip3 install monoloco>'
+4. Create a ROS Workspace: http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment
+5. In order to run the wrapper with a turtlebot robot, we will need to download the turtlebot packages:
+  1. cd ~/catkin_ws/src/
+  2. git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+  3. git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
+  4. cd ~/catkin_ws && catkin_make
+  5. git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+6. Clone mybot_gazebo into '<cd ~/catkin_ws/src/>' as well
+7. '<cd ~/catkin_ws>' && catkin_make
+8. '<export SVGA_VGPU10=0>' (in case you are running on a VM)
+9. '<export TURTLEBOT3_MODEL=waffle>'
+10.'<roslaunch mybot_gazebo breach_detection.launch>'
