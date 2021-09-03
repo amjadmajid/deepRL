@@ -1,0 +1,48 @@
+<!-- This launch file will just execute a default launch file provided by Gazebo, and tell it to load our world file 
+and show the Gazebo client -->
+<launch>	  
+
+	<arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
+	<arg name="x_pos" default="-4"/>
+	<arg name="y_pos" default="0.0"/>
+	<arg name="z_pos" default="0.0"/>
+
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">	    
+		<arg name="world_name" value="$(find mybot_gazebo)/worlds/mybot.world"/>	    
+		<arg name="gui" value="true"/>	  
+	</include>	
+
+	<!-- The first tag will first call the xacro script to convert of xacro description into an actual URDF. 
+	This URDF is then inserted into a ROS parameter called “robot_description” (this is a standard name used by many ROS tools).-->
+	<param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" />
+
+	<!-- The second tag launches a program from the gazebo_ros package that will load the URDF 
+	from the parameter “robot_description” and spawn the model into our Gazebo simulator -->
+	<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" 
+	args="-urdf -model turtlebot3_burger -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
+
+	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher2">
+    <param name="publish_frequency" type="double" value="50.0" />
+    <param name="tf_prefix" value=""/>
+  	</node>
+
+
+    <arg name="monoloco_args" value="predict docs/frame0032.jpg --activities social_distance --output_types front bird"/>
+	<arg name="image_topic" default="/camera/color/image_raw" /> 
+	<arg name="maxpoints" default="1000" />
+    <arg name="debug" default="True" />
+	<!-- <node name="breach_detector" pkg="mybot_gazebo" type="breach_detector.py" output="screen">
+		<param name="maxpoints" value="$(arg maxpoints)" />
+        <param name="debug" value="$(arg debug)" />
+	</node> -->
+ 
+</launch>
+  <!-- <?ignore
+    <arg name="monoloco_args" value="activities social_distance output_types front bird"/>
+  ?> -->
+
+  <!-- specify path to python monoloco library
+  <arg name="py_monoloco_path" default="/home/serge/anaconda2/envs/monoloco_lib_env/lib/python3.6/site-packages/monoloco" /> -->
+
+  <!-- rostopic to subscribe for color images -->
+  <!-- <arg name="image_topic" default="/camera/color/image_raw" /> --> 
