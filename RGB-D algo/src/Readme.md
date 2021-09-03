@@ -14,12 +14,12 @@ The steps needed to run it are:
 6. '<export SVGA_VGPU10=0>' (in case you are running on a VM)
 Run the following commands: <br/>
 Terminal 1: 2D and 3D object detection nodes <br/> 
-1. source devel/setup.bash
-2. roslaunch darknet_ros_3d darknet_ros_3d.launch
+  1. source devel/setup.bash
+  2. roslaunch darknet_ros_3d darknet_ros_3d.launch
 Terminal 2: Robot and Gazebo env <br/>
-1. source devel/setup.bash
-2. export TURTLEBOT3_MODEL=waffle
-3. roslaunch mybot_gazebo breach_detection.launch
+  1. source devel/setup.bash
+  2. export TURTLEBOT3_MODEL=waffle
+  3. roslaunch mybot_gazebo breach_detection.launch
 Terminal 3: Tracking and computing breaches node  <br/>
-1. source devel/setup.bash
-2. roslaunch sort_track sort.launch
+  1. source devel/setup.bash
+  2. roslaunch sort_track sort.launch
