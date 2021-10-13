@@ -1,0 +1,8 @@
+prefix=/home/jetbot/Documents/camera_ws/install
+
+Name: ros_jetbot
+Description: Description of ros_jetbot
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

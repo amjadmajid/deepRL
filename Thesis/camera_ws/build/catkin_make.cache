@@ -1,0 +1,2 @@
+SORT/sort_track:darknet_ros/darknet_ros:darknet_ros/darknet_ros_msgs:ddynamic_reconfigure:gb_visual_detection_3d/darknet_ros_3d:gb_visual_detection_3d_msgs:jetbot_ros:jetson_nano_ros_motors_driver-main:realsense-ros/realsense2_camera:realsense-ros/realsense2_description:rgbd_launch:ros_jetbot/ros_jetbot:rplidar_ros
+-DCATKIN_DEVEL_PREFIX=/home/jetbot/Documents/camera_ws/devel -DCMAKE_INSTALL_PREFIX=/home/jetbot/Documents/camera_ws/install -G Unix Makefiles
