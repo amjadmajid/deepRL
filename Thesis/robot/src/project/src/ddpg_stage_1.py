@@ -320,7 +320,7 @@ class RunManager():
     def __init__(self):
         # Define subscribers
         print('new')
-        self.coord_sub = rospy.Subscriber('/findObjects1', Object, self.setCoord, queue_size = 1, buff_size = 2**24)
+        self.coord_sub = rospy.Subscriber('/findObjects', Object, self.setCoord, queue_size = 1, buff_size = 2**24)
         # Define publishers
         # Spin
         
