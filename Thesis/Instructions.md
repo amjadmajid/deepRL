@@ -7,11 +7,13 @@ Install Intel® RealSense™ SDK 2.0 from Source (Jetson devices)
 5. Clone this repository: https://github.com/JetsonHacksNano/installRealSenseROS
 6. cd installRealSenseROS
 7. $ ./installRealSenseROS.sh <catkin_ws_name>
-8. source devel/setup.bash
-9. roslaunch realsense2_camera rs_rgbd.launch initial_reset:=true (This ensures the point cloud topic is of PointCloud2 type and that it is depth_registered.)
-sudo nano /etc/hosts
+8. Download https://github.com/ros-drivers/rgbd_launch/tree/noetic-devel into the catkin source
+9. Run catkin_make
+10. source devel/setup.bash
+11. roslaunch realsense2_camera rs_rgbd.launch initial_reset:=true
 
 ######### Instructions only for running DRL navigation: ##########
+
 On the Jetbot- "camera_ws" folder:
 1. sudo chmod 666 /dev/ttyUSB0
 2. roslaunch rplidar_ros rplidar_s1.launch
@@ -24,6 +26,7 @@ On the PC - "robot" folder:
 4. rostopic pub cmd_vel geometry_msgs/Twist -r 1 -- '[0.0,0.0,0.0]' '[0.0,0.0,0.0]' (Use it to stop the robot)
 
 ######### Instructions for navigation and detection: ##########
+
 On the Jetbot- "camera_ws" folder:
 1. sudo chmod 666 /dev/ttyUSB0
 2. roslaunch rplidar_ros rplidar_s1.launch
@@ -33,6 +36,7 @@ On the Jetbot- "camera_ws" folder:
 6. roslaunch sort_track sort.launch
 
 On the PC - "robot" folder:
+
 1. roslaunch hector_slam_launch tutorial.launch
 2. roslaunch project ddpg_stage_2.launch
 3. rostopic pub cmd_vel geometry_msgs/Twist -r 1 -- '[0.0,0.0,0.0]' '[0.0,0.0,0.0]' (Use it to stop the robot)
