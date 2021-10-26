@@ -1,0 +1,36 @@
+digraph G {
+"odom" -> "base_link"[label=" Broadcaster: /rf2o_laser_odometry\nAverage rate: 6.124\nBuffer length: 4.899\nMost recent transform: 1635004380.091\nOldest transform: 1635004375.193\n"];
+"map" -> "odom"[label=" Broadcaster: /amcl\nAverage rate: 10.207\nBuffer length: 4.899\nMost recent transform: 1635004380.191\nOldest transform: 1635004375.293\n"];
+"back_caster_base" -> "back_caster_lt_cyl"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "back_caster_base"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"back_caster_base" -> "back_caster_rt_cyl"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "front_caster_base"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "lt_antenna"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "lt_wheel_shaft"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "pcb_boards"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "rt_antenna"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "rt_wheel_shaft"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"camera_pcb_base" -> "camera_lens_body"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"camera_screen_base" -> "camera_pcb_base"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"camera_lens_body" -> "camera_lens_body_out"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"camera_lens_body_out" -> "camera_lens"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"camera_mount_over" -> "camera_mount_angled"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"camera_mount_base" -> "camera_mount_over"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "camera_mount_base"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"camera_mount_angled" -> "camera_screen_base"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"front_caster_base" -> "front_caster_lt_cyl"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"front_caster_base" -> "front_caster_rt_cyl"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"lt_antenna" -> "lt_antenna_top"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"lt_wheel_shaft" -> "lt_wheelc"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"rt_antenna" -> "rt_antenna_top"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"rt_wheel_shaft" -> "rt_wheelc"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "laser"[label=" Broadcaster: /base_to_laser_broadcaster\nAverage rate: 10.189\nBuffer length: 4.907\nMost recent transform: 1635004380.459\nOldest transform: 1635004375.552\n"];
+"back_caster_base" -> "back_caster_ball"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10.203\nBuffer length: 4.9\nMost recent transform: 1635004380.375\nOldest transform: 1635004375.474\n"];
+"front_caster_base" -> "front_caster_ball"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10.203\nBuffer length: 4.9\nMost recent transform: 1635004380.375\nOldest transform: 1635004375.474\n"];
+"lt_wheelc" -> "lt_wheel"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10.203\nBuffer length: 4.9\nMost recent transform: 1635004380.375\nOldest transform: 1635004375.474\n"];
+"rt_wheelc" -> "rt_wheel"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10.203\nBuffer length: 4.9\nMost recent transform: 1635004380.375\nOldest transform: 1635004375.474\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1635004380.4548383"[ shape=plaintext ] ;
+}->"map";
+}

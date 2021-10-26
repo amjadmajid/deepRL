@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<launch>
+<!-- <remap from="map" to="map_hector"/>
+<remap from="scanmatch_odom" to="odom"/>
+  <arg name="tf_map_scanmatch_transform_frame_name" default="odom"/>
+  <arg name="base_frame" default="base_link"/>
+  <arg name="odom_frame" default="odom"/>
+  <arg name="pub_map_odom_transform" default="false"/>
+  <arg name="scan_subscriber_queue_size" default="5"/>
+  <arg name="scan_topic" default="scan"/>
+  <arg name="map_size" default="2048"/> -->
+  <param name="robot_description" textfile="$(find jetbot_diff_drive)/urdf/_jetbot.urdf"/>
+  <node name="joint_state_publisher" pkg ="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg ="robot_state_publisher" type="robot_state_publisher"/>
+  <node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0 0 0 0 0 0 base_link laser 100"/>
+</launch>
