@@ -1,0 +1,8 @@
+prefix=/home/serge/github/robot/install
+
+Name: DRL_nav
+Description: Description of DRL_nav
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

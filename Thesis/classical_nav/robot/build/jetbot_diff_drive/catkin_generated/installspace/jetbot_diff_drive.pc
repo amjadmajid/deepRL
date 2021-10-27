@@ -1,8 +1,0 @@
-prefix=/home/serge/robot/install
-
-Name: jetbot_diff_drive
-Description: Description of jetbot_diff_drive
-Version: 0.0.1
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

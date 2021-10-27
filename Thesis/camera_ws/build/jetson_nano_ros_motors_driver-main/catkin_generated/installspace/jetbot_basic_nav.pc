@@ -1,8 +1,0 @@
-prefix=/home/jetbot/Documents/camera_ws/install
-
-Name: jetbot_basic_nav
-Description: Description of jetbot_basic_nav
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

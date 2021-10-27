@@ -1,8 +1,0 @@
-prefix=/home/jetbot/Documents/camera_ws/devel
-
-Name: rgbd_launch
-Description: Description of rgbd_launch
-Version: 2.2.2
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

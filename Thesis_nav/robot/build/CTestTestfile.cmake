@@ -1,0 +1,38 @@
+# CMake generated Testfile for 
+# Source directory: /home/serge/github/robot/src
+# Build directory: /home/serge/github/robot/build
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+subdirs("gtest")
+subdirs("hector_slam/hector_slam")
+subdirs("hector_slam/hector_slam_launch")
+subdirs("hector_slam/hector_map_tools")
+subdirs("hector_slam/hector_nav_msgs")
+subdirs("turtlebot3/turtlebot3")
+subdirs("turtlebot3_machine_learning")
+subdirs("turtlebot3_msgs")
+subdirs("turtlebot3/turtlebot3_navigation")
+subdirs("turtlebot3_simulations/turtlebot3_simulations")
+subdirs("DRL_nav")
+subdirs("classical_navigation")
+subdirs("custom_msgs")
+subdirs("hector_slam/hector_geotiff")
+subdirs("hector_slam/hector_geotiff_plugins")
+subdirs("hector_slam/hector_marker_drawing")
+subdirs("jetbot_diff_drive")
+subdirs("hector_slam/hector_compressed_map_transport")
+subdirs("hector_slam/hector_imu_attitude_to_tf")
+subdirs("hector_slam/hector_imu_tools")
+subdirs("hector_slam/hector_map_server")
+subdirs("hector_slam/hector_trajectory_server")
+subdirs("rf2o_laser_odometry")
+subdirs("hector_slam/hector_mapping")
+subdirs("turtlebot3/turtlebot3_bringup")
+subdirs("turtlebot3_dqn")
+subdirs("turtlebot3/turtlebot3_example")
+subdirs("turtlebot3_simulations/turtlebot3_fake")
+subdirs("turtlebot3_simulations/turtlebot3_gazebo")
+subdirs("turtlebot3/turtlebot3_slam")
+subdirs("turtlebot3/turtlebot3_teleop")
+subdirs("turtlebot3/turtlebot3_description")
