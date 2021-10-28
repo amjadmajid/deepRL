@@ -4,18 +4,16 @@
 
    1. Open the robot model in rviz     and gazebo:
 
-   2. - roslaunch jetbot_diff_drive      jetbot_rviz_gazebo.launch
+      - roslaunch jetbot_diff_drive      jetbot_rviz_gazebo.launch
 
-   3. Create a map of our     simulation
-
-   4. - roslaunch jetbot_diff_drive      jetbot_rviz_gazebo.launch
+   2. Create a map of our     simulation
+      - roslaunch jetbot_diff_drive      jetbot_rviz_gazebo.launch
       - roslaunch hector_slam_launch      tutorial.launch
       - rosrun map_server map_saver      –f sim_env
       - Save the map in the maps      folder: robot/src/DRL_nav/maps
 
-   5. Run the DRL training on the     saved map (navigation with AMCL)
-
-   6. - roslaunch jetbot_diff_drive      jetbot_rviz_gazebo_2.launch
+   4. Run the DRL training on the saved map (navigation with AMCL)
+      - roslaunch jetbot_diff_drive      jetbot_rviz_gazebo_2.launch
       - roslaunch DRL_nav      tf_launch.launch
       - roslaunch      rf2o_laser_odometry rf2o_laser_odometry.launch
       - roslaunch DRL_nav      amcl_launch.launch
@@ -26,13 +24,11 @@
    Run classical navigation on the real robot:
 
    1. On the robot:
-
-   2. - roslaunch rplidar_ros      rplidar_s1.launch
+      - roslaunch rplidar_ros      rplidar_s1.launch
       - rosrun jetbot_ros      jetson_motors.py
 
    3. On your PC:
-
-   4. - roslaunch      classical_navigation tf_launch.launch
+      - roslaunch      classical_navigation tf_launch.launch
       - roslaunch      rf2o_laser_odometry rf2o_laser_odometry.launch
       - roslaunch      classical_navigation nav_launch.launch
 
@@ -41,13 +37,11 @@
    Run DDPG with AMCL on the robot:
 
    1. On the robot:
-
-   2. - roslaunch rplidar_ros      rplidar_s1.launch
+      - roslaunch rplidar_ros      rplidar_s1.launch
       - rosrun jetbot_ros      jetson_motors.py
 
    3. On the PC:
-
-   4. - Create a map of the      environment
+      - Create a map of the      environment
       - roslaunch DRL_nav      tf_launch_real.launch
       - roslaunch      rf2o_laser_odometry rf2o_laser_odometry.launch
       - roslaunch DRL_nav      amcl_launch.launch
