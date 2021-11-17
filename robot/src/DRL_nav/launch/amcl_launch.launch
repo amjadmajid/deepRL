@@ -1,7 +1,0 @@
-<launch>
-  <!-- This module establish transformation from odom frame to base frame. -->
-  <node pkg="DRL_nav" type="odom_hector.py" name="ddpg_stage_2" output="screen" />
-  
-  <include file="$(find amcl)/examples/amcl_diff.launch"/>
-</launch>
-
