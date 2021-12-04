@@ -1,0 +1,18 @@
+<launch>
+  <!-- Launch AMCL -->
+  <include file="$(find amcl)/examples/amcl_diff.launch"/>
+  <arg name="local_planner" default='dwa' />
+   <arg name="move_forward_only" default="false"/>
+  <!-- Launch move_base -->
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <rosparam file="$(find classical_navigation)/nav_config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find classical_navigation)/nav_config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find classical_navigation)/nav_config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find classical_navigation)/nav_config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find classical_navigation)/nav_config/base_local_planner_params.yaml" command="load" />
+    <!-- <rosparam file="$(find classical_navigation)/nav_config/dwa_local_planner_params.yaml" command="load" /> -->
+    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" if="$(eval arg('local_planner') == 'dwa')"/>
+    <param name="DWAPlannerROS/min_vel_x" value="0.0" if="$(arg move_forward_only)"/>
+  </node>
+</launch>
+
