@@ -1,7 +1,0 @@
-global_costmap:
-  global_frame: map
-  update_frequency: 5.0
-  publish_frequency: 5.0
-  transform_tolerance: 0.5
-  resolution: 0.1
-
