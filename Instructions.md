@@ -1,6 +1,9 @@
 Useful links and implementations:
 1. https://spinningup.openai.com/en/latest/algorithms/sac.html
 
-2. https://towardsdatascience.com/soft-actor-critic-demystified-b8427df61665
+2. https://github.com/higgsfield/RL-Adventure-2/blob/master/7.soft%20actor-critic.ipynb
 
-3 .https://github.com/quantumiracle/Popular-RL-Algorithms/blob/master/sac.py
+Method/implementation used:
+1. ps://towardsdatascience.com/soft-actor-critic-demystified-b8427df61665
+
+2. ps://github.com/dranaju/project
