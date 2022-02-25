@@ -4,6 +4,6 @@ Useful links and implementations:
 2. https://github.com/higgsfield/RL-Adventure-2/blob/master/7.soft%20actor-critic.ipynb
 
 Method/implementation used:
-1. ps://towardsdatascience.com/soft-actor-critic-demystified-b8427df61665
+1. https://towardsdatascience.com/soft-actor-critic-demystified-b8427df61665
 
-2. ps://github.com/dranaju/project
+2. https://github.com/dranaju/project
