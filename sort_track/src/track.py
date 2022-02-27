@@ -23,6 +23,9 @@ import pandas as pd
 import rospy
 import numpy as np
 import cv2
+from PIL import Image
+import json
+import os
 
 person_dict={}
 BID_dict = {}
@@ -31,6 +34,7 @@ average_coord={}
 id_set = set()
 counter=0
 robot_moving=False
+rgbd_breach_detected=False
 nav_x=0
 nav_y =0
 dic_ID=1
@@ -191,7 +195,7 @@ def callback_det(data):
 	global average_coord
 	global dic_ID
 	global breaches_dict
-
+	global rgbd_breach_detected
 	breach_bool=False
 	track_bool=False
 	detections = []
@@ -242,6 +246,7 @@ def callback_det(data):
 		y_val=0
 		if (breach_bool):
 			x_val,y_val=gather_breaches()
+			rgbd_breach_detected=True
 			breach_bool=False
 			
 		pub = rospy.Publisher('findObjects', Object, queue_size=1)
@@ -276,11 +281,25 @@ def publish(trackers,box):
 	pub_trackers = rospy.Publisher('sort_track', ComputeBoxes,queue_size=10)
 	pub_trackers.publish(computeboxes)
 
+def rgbTracking(data):
+    cv_image = np.frombuffer(data.data, dtype=np.uint8).reshape(data.height, data.width, -1)
+    cv2.imwrite('camera_image.jpeg', cv_image)
+    os.system('python3 -m monoloco.run predict camera_image.jpeg --activities social_distance --output_types json --n_dropout 50')
+    f = open('out_camera_image.jpeg.monoloco.json')
+    data_json = json.load(f)
+    status=data_json["social_distance"]
+    resp = data_json["xyz_pred"]
+    print(resp)
+    ale=data_json["stds_ale"]
+    ep=data_json["stds_epi"]
+
 def main():
 	global tracker
 	global msg
 	global robot_moving
+	global rgbd_breach_detected
 	msg = numpy_msg(IntList)()
+	image_topic = rospy.get_param('~image_topic', '/realsense_d435/color/image_raw')
 	while not rospy.is_shutdown():
 		rospy.init_node('sort_tracker', anonymous=False)
 		rate = rospy.Rate(10)
@@ -294,6 +313,9 @@ def main():
 		tracker = sort.Sort(max_age=max_age, min_hits=min_hits) #create instance of the SORT tracker
 		cost_threshold = cost_threshold
 		sub_detection = rospy.Subscriber('/darknet_ros_3d/bounding_boxes', BoundingBoxes3d , callback_det)
+		if not rgbd_breach_detected:
+			rospy.loginfo('RGB people detection starting')
+			image_sub = rospy.Subscriber(image_topic, Image, rgbTracking, queue_size = 1, buff_size = 2**24)
 		rate.sleep()
 		rospy.spin()
 
